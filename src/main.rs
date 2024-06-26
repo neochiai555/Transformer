@@ -1,6 +1,15 @@
-use transformer_lib::add;
+use transformer_lib::read_lines;
 
 fn main() {
-    let x = add(1, 2);
-    println!("{}", x)
+    let result_lines = read_lines("/tmp/test.txt");
+    match result_lines {
+        Ok(lines) => {
+            for line in lines {
+                println!("{:?}", line);
+            }
+        }
+        Err(error) => {
+            println!("Error: {:?}", error);
+        }
+    }
 }
