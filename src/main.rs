@@ -1,5 +1,4 @@
 use transformer_lib::read_lines;
-
 fn main() {
     let result_lines = read_lines("/tmp/test.txt");
     match result_lines {
