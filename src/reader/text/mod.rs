@@ -6,7 +6,7 @@ use std::io;
 use std::io::BufRead;
 use std::path::Path;
 
-use crate::reader::text::textreader::{TextRecord, TextRecordList};
+pub use crate::reader::text::textreader::{TextRecord, TextRecordList};
 
 pub fn read_lines<P>(filename: P) -> Result<TextRecordList, Error>
     where P: AsRef<Path>, {
